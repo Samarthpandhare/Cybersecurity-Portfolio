@@ -78,10 +78,11 @@ use: `ls`
 Saw an interesting file “Sup3rS3cretPickl3Ingred.txt” but could not read contents of the file (using cat) as this functionality was disabled on the server.
 
 6. **First flag to read**
-Tried another command "less" to read the file : `less Sup3rS3cretPickl3Ingred.txt` & got our first flag!
+Tried another command "less" to read the file : `less Sup3rS3cretPickl3Ingred.txt`
+## got our first flag! ##
 ![Source: Flag 1](screenshots/Flag1.png)
 
-7. **Second Flag to read**
+8. **Second Flag to read**
 We tried to search second flag using command pannel in /home directory.
 - `ls /home`
   we got:
@@ -91,7 +92,7 @@ We tried to search second flag using command pannel in /home directory.
   we got:
     -second ingredients
 - `less /home/rick/'second ingredients`
-we finally got our second ingredient which is our 2nd flag!
+## we finally got our second ingredient which is our 2nd flag! ##
 ![Source: Flag 2](screenshots/Flag2.png)
 
 8. **Third Flag to read**
@@ -117,6 +118,7 @@ Usually final flags need root access of target machines so we will try to gain r
   `3rd.txt` root flag is found
   read '3rd.txt' using `sudo less /root/'3rd.txt'`.
   ![Source: 3rd flag found](screenshots/Flag3.png)
-  We found our final flag!
+  ## We found our final flag! ##
   
+  I hope this helped. Thankyou!
    
