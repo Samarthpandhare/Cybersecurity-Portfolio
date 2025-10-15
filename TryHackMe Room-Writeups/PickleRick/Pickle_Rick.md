@@ -48,7 +48,30 @@ Reviewed the source of this page that gave a username “R1ckRul3s”.
 ![Source: web server source code](screenshots/source_code_of_web_server.png)
 
 3. **Used gobuster to brute force directories to discover directories and pages on this website. Gobuster discovered few interesting pages**
-'''bash
+```bash
+sudo gobuster dir -u http://10.10.122.238/ -w /usr/share/wordlists/dirb/common.txt -e -x php,html,txt -t 40 
+```
+`-u http://10.10.122.238/` Target URL to test
+`-w /usr/share/wordlists/dirb/common.txt` The wordlist Gobuster will use
+`-e (or --expanded)` Expanded mode — print full URLs
+`-x php,html,txt (or --extensions)` Try the specified file extensions for each word
+`-t 40` Number of concurrent threads (workers). Higher = faster but more load on target and your network. 40 is aggressive; if the target is slow or rate‑limits, lower it.
 
+![Source: Gobuster Output](screenshots/GoBuster_output.png)
+We found some intresting Directories as follows:
+(a) login.php
+(b) robots.txt
+(c) server-status
 
+4. **Browsed to “robots.txt” file and found one interesting piece of information there**
+`Wubbalubbadubdub`
+5. **Browsed to “login.php” and found a login page asking for a username and password**
+Tried information gathered in previous steps to login to this portal.
+username : `R1ckRul3s`
+password : `Wubbalubbadubdub`
 
+We got access to the command panel!
+
+5. **Tried listing the contents of directory**
+use: `ls`
+![Source: contents of directory](screenshots/Contents_of_dir)
