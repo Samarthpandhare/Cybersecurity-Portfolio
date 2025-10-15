@@ -93,3 +93,30 @@ We tried to search second flag using command pannel in /home directory.
 - `less /home/rick/'second ingredients`
 we finally got our second ingredient which is our 2nd flag!
 ![Source: Flag 2](screenshots/Flag2.png)
+
+8. **Third Flag to read**
+Usually final flags need root access of target machines so we will try to gain root access to our target webserver.
+
+ Check our permissions:
+        - use `sudo -l` to check our permissions.
+   
+         output:
+           
+            Matching Defaults entries for www-data on ip-10-10-122-238:
+                env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+            User www-data may run the following commands on ip-10-10-122-238:
+                (ALL) NOPASSWD: ALL
+  - It means: the user www-data may run any command as any user (including root) without being prompted for a password.
+    
+  - In sudoers notation: ALL (hosts) ALL (as whom) NOPASSWD: ALL (no password required for all commands).
+
+  - Therefore being `www-data` user on system, we can execute any command which an root user can execute.
+
+  `sudo ls /root` Being root user we can go inside root directory.
+  `3rd.txt` root flag is found
+  read '3rd.txt' using `sudo less /root/'3rd.txt'`.
+  ![Source: 3rd flag found](screenshots/Flag3.jpg)
+  We found our final flag!
+  
+   
