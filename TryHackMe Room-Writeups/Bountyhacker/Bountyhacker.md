@@ -1,4 +1,4 @@
-# Room: Bounty Hacker # (https://tryhackme.com/room/cowboyhacker)
+# Room: Bounty Hacker  (https://tryhackme.com/room/cowboyhacker)
 ---
 ## Description ##
 - We have to find the user & password.
