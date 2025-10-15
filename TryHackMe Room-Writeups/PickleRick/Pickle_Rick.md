@@ -75,3 +75,8 @@ We got access to the command panel!
 5. **Tried listing the contents of directory**
 use: `ls`
 ![Source: contents of directory](screenshots/Contents_of_dir.png)
+Saw an interesting file “Sup3rS3cretPickl3Ingred.txt” but could not read contents of the file (using cat) as this functionality was disabled on the server.
+
+6. **First flag to read**
+Tried another command "less" to read the file : `less Sup3rS3cretPickl3Ingred.txt` & got our first flag!
+![Source: Flag 1](screenshots/Flag1.png)
