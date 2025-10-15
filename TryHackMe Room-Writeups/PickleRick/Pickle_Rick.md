@@ -45,6 +45,6 @@ ports 22 & 80 are open!
 
 2. **Browsed to webpage**
 Reviewed the source of this page that gave a username “R1ckRul3s”.
-![Source: web server source code](<PickleRick/screenshots/source_code_of_web_server.png>)
+![Source: web server source code](<TryHackMe Room-Writeups/PickleRick//screenshots/source_code_of_web_server.png>)
 
 
