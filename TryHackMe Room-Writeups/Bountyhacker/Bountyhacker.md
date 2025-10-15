@@ -71,8 +71,21 @@
        
   4. ### To find our user flag ###
   - Login to service using the username and password found.
+    
 ![Source: User Flag](screenshots/userflag.png)
-     
+
+   - #### Here We found our userflag! ####
+
+  5. ### Privilage Escalation ###
+   - usually root flags need root permissions.
+   - Let's check our sudo permissions.
+   - to check permissions:
+     ```bash
+     sudo -l
+     ```
+   - Output:
+     ![Source: Sudo Permission](screenshots/sudoperm.png)
+  
       
 
      
