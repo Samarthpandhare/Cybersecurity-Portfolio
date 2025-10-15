@@ -116,7 +116,7 @@ Usually final flags need root access of target machines so we will try to gain r
   `sudo ls /root` Being root user we can go inside root directory.
   `3rd.txt` root flag is found
   read '3rd.txt' using `sudo less /root/'3rd.txt'`.
-  ![Source: 3rd flag found](screenshots/Flag3.jpg)
+  ![Source: 3rd flag found](screenshots/Flag3.png)
   We found our final flag!
   
    
