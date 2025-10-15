@@ -74,4 +74,4 @@ We got access to the command panel!
 
 5. **Tried listing the contents of directory**
 use: `ls`
-![Source: contents of directory](screenshots/Contents_of_dir)
+![Source: contents of directory](screenshots/Contents_of_dir.png)
