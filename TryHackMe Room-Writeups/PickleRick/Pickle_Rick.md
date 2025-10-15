@@ -47,4 +47,8 @@ ports 22 & 80 are open!
 Reviewed the source of this page that gave a username “R1ckRul3s”.
 ![Source: web server source code](screenshots/source_code_of_web_server.png)
 
+3. **Used gobuster to brute force directories to discover directories and pages on this website. Gobuster discovered few interesting pages**
+'''bash
+
+
 
