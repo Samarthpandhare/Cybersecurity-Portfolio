@@ -80,3 +80,16 @@ Saw an interesting file “Sup3rS3cretPickl3Ingred.txt” but could not read con
 6. **First flag to read**
 Tried another command "less" to read the file : `less Sup3rS3cretPickl3Ingred.txt` & got our first flag!
 ![Source: Flag 1](screenshots/Flag1.png)
+
+7. **Second Flag to read**
+We tried to search second flag using command pannel in /home directory.
+- `ls /home`
+  we got:
+    -rick
+    -ubuntu
+- `ls /home/rick`
+  we got:
+    -second ingredients
+- `less /home/rick/'second ingredients`
+we finally got our second ingredient which is our 2nd flag!
+![Source: Flag 2](screenshots/Flag2.png)
