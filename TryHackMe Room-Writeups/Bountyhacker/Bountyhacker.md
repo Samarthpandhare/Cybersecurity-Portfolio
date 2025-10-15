@@ -65,8 +65,13 @@
        hydra -L usernames.txt -P locks.txt ssh://10.10.148.152:22
        ```
        
-     - Output:
+   - Output:
        ![Source: password found](screenshots/pass.png)
+     - Hence we found our Password `RedDr4gonSynd1cat3`
+       
+  4. ### To find our user flag ###
+  - Login to service using the username and password found.
+![Source: User Flag](screenshots/userflag.png)
      
       
 
