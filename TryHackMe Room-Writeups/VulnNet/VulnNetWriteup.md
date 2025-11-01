@@ -33,7 +33,7 @@ Victim's ip   broadcast.vulnnet.thm
 nmap -p1-1000 -T5  -sV TargetIP
 
 ```
-![source code: Nmap results](screenshots/Nmap)
+![source code: Nmap results](screenshots/nmap.png)
 
 - There are 2 open ports. Port 22 is used for SSH, and port 80 serves a web server.
 - We start by enumerating the web server. Browsing to http://vulnnet.thm/ we find the following page:
