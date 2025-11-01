@@ -36,11 +36,13 @@ nmap -p1-1000 -T5  -sV TargetIP
 ![source code: Nmap results](screenshots/nmap.png)
 
 - There are 2 open ports. Port 22 is used for SSH, and port 80 serves a web server.
-- We start by enumerating the web server. Browsing to http://vulnnet.thm/ we find the following page:
+- We start by enumerating the web server. Browsing to http://vulnnet.thm/ we find the page.
 
 ### 2. web server reconnaissance ###
 - Opening webserver on browser.
 - Viewing its source code.
+![source code: source code](screenshots/source.png)
+
   
 - We got 2 javascript files at last.
 - We tried to find some important information using some keywords like (password, secret, token, api, etc) but got nothing. 
@@ -55,6 +57,8 @@ nmap -p1-1000 -T5  -sV TargetIP
 - Turn on intercept.
 - Refresh page.
 - get request.
+  ![source code: request](screenshots/burprequest.png)
+
 - send request to repeater.
 - add
 ```bash
@@ -80,19 +84,25 @@ nmap -p1-1000 -T5  -sV TargetIP
   john hash.txt -wordlist=/usr/share/wordlists/rockyou.txt
   john --show hash.txt
   ```
+  ![source code: john](screenshots/john.png)
+
 - We got our password which we can use to login in page which we got from our 1st Javascript file.
 
 ### 5. Login using credintials ###
 
 - login to `http://broadcast.vulnnet.thm/` using the credintials we found.
 - After login we see clipbucket page as shown below.
+![source code: ](screenshots/clipbucket.png)
 
 - After seeing source code of page, we found the clipbucket version.
+![source code: ](screenshots/version.png)
 
 ### 6. Search for clip bucket version exploit###
 
 - Search for clipbucket version exploit on google.
 - By doing some recon about clipbucket v4.0, we got that arbitary file can be uploaded which is vulneriblity.
+![source code: ](screenshots/exploitdb.png)
+
 - before uploading payload, edit the ip address and port number of  php-reverse-shell.php file. 
 - use command for arbitary file upload :
 ```bash
@@ -112,6 +122,8 @@ curl -F "file=@php-reverse-shell.php" -F "plupload=1" -F "name=php-reverse-shell
   ```
 - Execute the payload which you've uploaded earlier.
 - You got the shell.
+  ![source code: ](screenshots/netcat.png)
+
 - to get access of proper shell use following command:
 ```bash
  python3 -c "import pty;pty.spawn('bin/bash')"
@@ -133,6 +145,8 @@ tar xvf ssh-backup.tar.gz
 - We get one file named id_rsa.
 - It's a ssh key.
 - Use john to get passphrase of key.
+  ![source code: ](screenshots/servermanage.png)
+
 - using passphrase login as server-management user using SSH.
 #### Here we got our userflag! ####
 
